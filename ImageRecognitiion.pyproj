@@ -1,0 +1,56 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2125ec51-819a-4635-baa7-896018af2497</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>SpeedTester.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ImageRecognitiion</Name>
+    <RootNamespace>ImageRecognitiion</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Connection.py" />
+    <Compile Include="Connection_JIT.py" />
+    <Compile Include="DataReader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataWriter.py" />
+    <Compile Include="ImageRecognitiion.py" />
+    <Compile Include="NeuralNet.py" />
+    <Compile Include="NeuralNet_JIT.py" />
+    <Compile Include="Node.py" />
+    <Compile Include="Node_JIT.py" />
+    <Compile Include="Population.py" />
+    <Compile Include="Predictor.py" />
+    <Compile Include="Runner.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpeedTester.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestingRunner.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
